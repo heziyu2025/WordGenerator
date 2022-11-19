@@ -3,6 +3,7 @@ import requests
 import tkinter as tk
 from tkinter import ttk
 import winsound
+import pyperclip
 
 def combine(word):
     try:
@@ -32,6 +33,8 @@ def combine(word):
         return -1
 
 def zuci_button(self=None):
+    output_copy_successed.pack_forget()
+    
     if (len(input_entry.get()) > 1):
         input_error.config(text='仅支持输入1个汉字！')
         input_error.pack()
@@ -60,10 +63,15 @@ def zuci_button(self=None):
 
     return 0
 
-def output_clear_command():
+def output_clear_cmd():
     output_text.configure(state=tk.NORMAL)
     output_text.delete(1.0, tk.END)
     output_text.configure(state=tk.DISABLED)
+    output_copy_successed.pack_forget()
+
+def output_copy_cmd():
+    pyperclip.copy(output_text.get(1.0, tk.END))
+    output_copy_successed.pack()
 
 root = tk.Tk()
 root.geometry('300x250')
@@ -97,8 +105,17 @@ output_text = tk.Text(output_frame, width=33, height=5)
 output_text.configure(state=tk.DISABLED)
 output_text.pack()
 
-output_clear = ttk.Button(output_frame, text='清空', command=output_clear_command)
-output_clear.pack()
+output_control_frame = ttk.Frame(output_frame)
+
+output_clear = ttk.Button(output_control_frame, text='清空', command=output_clear_cmd)
+output_clear.pack(side=tk.LEFT)
+
+output_copy = ttk.Button(output_control_frame, text='复制', command=output_copy_cmd)
+output_copy.pack(side=tk.LEFT)
+
+output_copy_successed = ttk.Label(output_control_frame, text='复制成功！')
+
+output_control_frame.pack()
 
 output_frame.pack()
 
