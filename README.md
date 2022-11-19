@@ -7,7 +7,7 @@ Enter the word you want to group in the input box
 
 ![image 1](images/image%201.png)
 
-Click ```组词``` or press ```Enter```
+Click `组词` or press `Enter`
 
 ![image 2](images/image%202.png)
 

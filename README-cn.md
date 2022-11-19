@@ -7,7 +7,7 @@
 
 ![图 1](images/image%201.png)
 
-点击```组词```或按下```Enter```
+点击`组词`或按下`Enter`
 
 ![图 2](images/image%202.png)
 
