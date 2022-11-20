@@ -3,7 +3,7 @@ English | [简体中文](README-cn.md) | [繁体中文](README-zh.md)
 Enter a word, and the program will help you form words.
 
 # Instructions
-Enter the word you want to group in the input box
+Enter the word you want to form a word in the input box
 
 ![image 1](images/image%201.png)
 
