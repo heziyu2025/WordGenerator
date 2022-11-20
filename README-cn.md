@@ -1,4 +1,4 @@
-语言：中文 | [English](README.md)
+[English](README.md) | 简体中文 | [繁体中文](README-zh.md)
 # 功能
 输入一个字，程序会帮你组词。
 

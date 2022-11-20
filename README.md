@@ -1,4 +1,4 @@
-Language: English | [中文](README-cn.md)
+English | [简体中文](README-cn.md) | [繁体中文](README-zh.md)
 # Function
 Enter a word, and the program will help you form words.
 
